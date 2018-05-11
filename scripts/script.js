@@ -1,22 +1,11 @@
-//refining the selectors to get specific
+//using the next method to select the NEXT element and make changes
+$("#contact-methods").next().css({border: "3px solid red"}); //makes changes to the img element under the ul with id of contact-methods
 
+$("#social-nav").prev().css({border: "3px solid red"}); //access the same element but moves UP
 
-$("header nav li:first").css({border: "2px solid red"});
-$("header nav li:last").css({border: "2px solid red"});
+$(".banner-title").parents().css({border: "3px solid pink"}); // bubbles up and selects all the parents
 
-$("#contact ul:first").css({border: "2px solid red"});
+$("#contact").find(".facebook").css({border: "3px solid purple"}); //faster than using ("#contact .facebook")
 
-//overrides our first/last css
-$("header nav li:even").css({border: "2px solid blue"});
-$("header nav li:odd").css({border: "2px solid yellow"});
-
-$("section:not('#contact')").css({border: "2px solid green"});
-
-$("#social-nav li:lt(3)").css({border: "2px solid blue"});
-$("#social-nav li:gt(2)").css({border: "2px solid red"});
-
-//attribute filters
-$("div[class]").css({border: "2px solid pink"});
-
-//attribute with a specific value
-$("img[alt=quote]").css({border: "2px solid yellow"});
+//get socialnav id then get closest parent, a wrapper class
+$("#social-nav").closest(".wrapper").css({border: "3px solid orange"});
