@@ -1,11 +1,7 @@
-//vanilla JS way to get access to an ID
-document.getElementById("page-title");
+//Reach into the document and manipulate the elements
 
-//jQuery way 
-$("#page-title"); // returns the ID in a jQuery array Object that has access to the many methods
+$("h3").css({border: "3px solid blue"});
 
-//set the jQuery selector to a variable then add methods
-var heading = $("#page-title");
-heading.css({position: "relative"}); // will return the node inside the array but with added style
+$(".wrapper").css({border: "3px solid red"});
 
-heading[0] // will return the node but outside of the jQuery Array
+$("#clients").css({border: "3px solid yellow"});
