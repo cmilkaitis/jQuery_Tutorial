@@ -26,3 +26,14 @@ button[0].onclick = function() {
     $("#points-of-sale").toggleClass("open");
     return false; //turns off default behavior of the anchor tag
 };
+
+
+//Lesson15 binding and Unbinding Events
+
+var myLis = $("#points-of-sale li");
+
+myLis.on("click", function() {
+    $(this).css({"background" : "pink"});
+
+    myLis.off("click"); //doesnt work like in the video - multiple checks by removing other lessons code Maybe a jQuery 1 feature that was removed in this version?
+});
