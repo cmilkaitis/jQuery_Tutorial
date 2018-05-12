@@ -1,5 +1,5 @@
 //Lesson 19 Animations in jQuery
-
+/*
 $("section > h2").on("click", function(){
     $(this).animate({"width" : "500px", "height" : "100px"}, 1000, "linear", function(){
 
@@ -8,3 +8,41 @@ $("section > h2").on("click", function(){
     //can only animate items with numerical values
 
 });
+*/
+
+
+//Lesson 20 Fading Elements IN & Out
+
+/*
+$("section > h2").on("click", function(){
+
+    $(this).animate({"opacity": "0.5"});
+
+});
+
+
+//using jQuery methods
+$("section > h2").on("click", function(){
+
+    $(this).fadeOut(2000).fadeIn(500);
+
+});
+
+*/
+
+$("section > h2").on("click", function(){
+
+    $(this).fadeTo(200, 0.2)
+           .fadeTo(200, 0.8)
+           .fadeTo(200, 0.2)
+           .fadeTo(200, 0.8)
+           .fadeTo(200, 0.2)
+           .fadeTo(200, 0.8)
+           .fadeTo(200, 0.2)
+           .fadeTo(200, 0.8);
+
+});
+
+
+
+
