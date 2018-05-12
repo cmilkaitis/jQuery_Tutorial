@@ -1,20 +1,16 @@
-//Changing Attributes
+//CSS with jQuery
 
-/* 
-
-.removeAttr() removes completely
-.attr() can read or set the attribute
-
-*/
-
-
-$("contact img").removeAttr("alt");
-$("contact img").attr("alt", "location"); // sets with second parameter
-
-console.log($("contact img").attr("alt")); // prints the alt of the img in contact section to the console
+//this style is fine for 1 or 2 value changes but not more many
+$("#social-nav").css("top", "-200px").css("left", "100px");
 
 
 
+$("#social-nav").css({
+    "top" : "-400px",
+    "left" : "150px",
+    "opacity" : "0.5",
+    "border-top" : "4px solid red"
+});
 
 
 
