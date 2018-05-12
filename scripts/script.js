@@ -1,18 +1,26 @@
-//Adding content
-
-var tweet = "<div style='margin: 20px 0; padding: 10px; background: #eee'>The big fight live: Ham vs CHeese!</div>";
-
-$("#tweets div").append(tweet);
-
-
+//Wrap and unwrap elements 
 
 /*
 
-.append() adds content to the bottom of the element
-.prepend() to the top of the element
-.before() before the element
-.after() after the element
-.html() changes the whole html of the element (replaces what was there)
-.text() changes the text of an element (use while tweet var does not have html in it)
+$("section").wrap("<div>"); //wraps all sections individually with a div
+$("section").unwrap(); // will unwrap anything - doenst need an arguement
+$("section").wrapAll("<div>"); //wraps all sections non individually
 
 */
+
+var wrapper = "<div class ='wrapper'>";
+var button = $(".button");
+var wrapped = true;
+
+button[0].onclick = function() {
+    if (wrapped) {
+        $("section").unwrap();
+        wrapped = false;
+        button.text("Wrap");
+    } else {
+        $("section").wrapAll(wrapper);
+        wrapped = true;
+        button.text("Unwrap");
+    }
+
+};
