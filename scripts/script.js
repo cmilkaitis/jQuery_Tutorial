@@ -28,7 +28,7 @@ $("section > h2").on("click", function(){
 
 });
 
-*/
+
 
 $("section > h2").on("click", function(){
 
@@ -40,6 +40,23 @@ $("section > h2").on("click", function(){
            .fadeTo(200, 0.8)
            .fadeTo(200, 0.2)
            .fadeTo(200, 0.8);
+
+});
+
+*/
+
+//Lesson 21 Show Hide and Toggle
+/*
+$("section > h2").on("click", function(){
+
+    $(this).hide(1000).show(1000);
+
+});
+*/
+
+$("img[alt=map]").on("click", function(){
+
+    $("section > h2").toggle(1000);
 
 });
 
