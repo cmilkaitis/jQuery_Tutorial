@@ -11,7 +11,7 @@ $("#lead-banner").on("dblclick", function(){
 //Lesson 17 Document Reaady vs Window Load
 
 // will allow the scripts to be placed in the header instead of the closing of the body
-
+/*
 $("document").on("ready", function(){
 
 });
@@ -36,3 +36,15 @@ $(window).on("load", function(){
 $(window).load(function() {
 
 });
+*/
+
+//Lesson 18 The Event Object in jQuery
+$("*").on("click", function(e){
+    console.log(e.target); // onclick will log the node info
+    console.log("The event type is: " + e.type); // will also log the type of element
+    console.log("X co-ordinate of the event is: " + e.pageX); // will also log the mouse position on the X coordinate plane
+    console.log("Y co-ordinate of the event is: " + e.pageY); // will also log the mouse position on the Y coordinate plane
+    e.stopPropagation(); //stops this even from bubbling up to the parents of the clicked target
+});
+
+
