@@ -1,9 +1,21 @@
-//Removing content
+//Changing Attributes
 
 /* 
-.empty(); empties the innerHTML
-.remove(); removes the entire element
+
+.removeAttr() removes completely
+.attr() can read or set the attribute
 
 */
 
-$(".button").remove();
+
+$("contact img").removeAttr("alt");
+$("contact img").attr("alt", "location"); // sets with second parameter
+
+console.log($("contact img").attr("alt")); // prints the alt of the img in contact section to the console
+
+
+
+
+
+
+
