@@ -34,3 +34,12 @@ function changeQuote(){
 }
 
 var quoteTimer = setInterval(changeQuote, 3000);
+
+
+//Lesson24 Sliding Animation Example
+
+var items = $("#points-of-sale li");
+
+items.on("click", function(){
+    $(this).find("p").slideToggle(500);
+})
