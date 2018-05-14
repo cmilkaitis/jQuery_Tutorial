@@ -15,3 +15,22 @@ $(".slide-button-down").on("click", function(){
 $(".slide-button-down").on("click", function(){
     $("#lead-banner").slideToggle();
 });
+
+
+//Lesson23 - Fading Animation Example
+var allQuotes = $("blockquote");
+var currentQuote = 0;
+
+function changeQuote(){
+    $(allQuotes[currentQuote]).fadeOut(200, function(){
+        if(currentQuote === allQuotes.length - 1) {
+            currentQuote = 0;
+        } else {
+            currentQuote++;
+        }
+    
+        $(allQuotes[currentQuote]).fadeIn(200);
+    });
+}
+
+var quoteTimer = setInterval(changeQuote, 3000);
