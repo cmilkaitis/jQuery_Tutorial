@@ -1,65 +1,17 @@
-//Lesson 19 Animations in jQuery
+// Lesson 22 - Sliding Elements
 /*
-$("section > h2").on("click", function(){
-    $(this).animate({"width" : "500px", "height" : "100px"}, 1000, "linear", function(){
+$(".slide-button-up").on("click", function(){
+    $("#lead-banner").slideUp();
+});
 
-        alert("Animation complete");
+$(".slide-button-down").on("click", function(){
+    $("#lead-banner").slideDown(function(){
+        alert("animation complete")
     });
-    //can only animate items with numerical values
-
 });
 */
 
 
-//Lesson 20 Fading Elements IN & Out
-
-/*
-$("section > h2").on("click", function(){
-
-    $(this).animate({"opacity": "0.5"});
-
+$(".slide-button-down").on("click", function(){
+    $("#lead-banner").slideToggle();
 });
-
-
-//using jQuery methods
-$("section > h2").on("click", function(){
-
-    $(this).fadeOut(2000).fadeIn(500);
-
-});
-
-
-
-$("section > h2").on("click", function(){
-
-    $(this).fadeTo(200, 0.2)
-           .fadeTo(200, 0.8)
-           .fadeTo(200, 0.2)
-           .fadeTo(200, 0.8)
-           .fadeTo(200, 0.2)
-           .fadeTo(200, 0.8)
-           .fadeTo(200, 0.2)
-           .fadeTo(200, 0.8);
-
-});
-
-*/
-
-//Lesson 21 Show Hide and Toggle
-/*
-$("section > h2").on("click", function(){
-
-    $(this).hide(1000).show(1000);
-
-});
-*/
-
-$("img[alt=map]").on("click", function(){
-
-    $("section > h2").toggle(1000);
-
-});
-
-
-
-
